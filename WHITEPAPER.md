@@ -1,7 +1,7 @@
 # BEXChain Whitepaper v1.0 (Draft)
 
 Date: March 6, 2026
-Status: Internal draft
+Status: Public draft
 
 ## 1. Executive Summary
 BEXChain is a blockchain ecosystem with its native coin **BEX** as the primary currency for in-game transactions, third-party applications, service payments, and DeFi utilities within the BEX ecosystem. This whitepaper defines the economic foundation, token distribution, utility model, and initial technical parameters of the network.
@@ -25,19 +25,19 @@ Focused utility products and channels:
 ## 4. Technical Foundation
 BEXChain uses a custom EVM-compatible architecture approach to ensure compatibility with EVM integration patterns and tooling.
 
-Current technical parameters (referring to source code configuration):
+Current technical parameters:
 - Chain Name: `bexchain`
 - Chain ID: `140586`
 - Native Coin: `BEX`
 - Decimals: `18`
-- RPC URL (default): `http://localhost:8545`
-- API URL (default): `http://localhost:8545/api`
+- RPC URL (production): `https://rpc.bexchain.com`
+- API Base URL (production): `https://api.bexchain.com/api`
+- Explorer UI (production): `https://scan.bexchain.com`
 
-Available endpoints in the current implementation:
-- JSON-RPC: `/rpc`
-- Chain info API: `/api/chain_info`
-- Gas fee API: `/api/gas_fees`
-- Explorer UI: `/explorer/`
+Public integration endpoints:
+- JSON-RPC: `https://rpc.bexchain.com`
+- Chain info API: `https://api.bexchain.com/api/chain_info`
+- Gas fee API: `https://api.bexchain.com/api/gas_fees` (currently disabled on public endpoint)
 
 ## 5. Gas Model
 BEX is used as a fee for executing transactions on the network.
@@ -117,8 +117,9 @@ This document is a technical and economic whitepaper for informational purposes 
 
 ---
 
-## Appendix A - Technical Parameter Sources (Codebase)
-The technical parameters in this document are compiled from the configurations and implementations in the repository:
-- `config.py` (chain, supply, RPC/API)
-- `blockchain.py` (gas fee defaults)
-- `app.py` (RPC endpoint, API, explorer, audit trail)
+## Appendix A - Technical Parameter Sources
+Public references in this repository:
+- `README.md` (official network profile and endpoint summary)
+- `docs/network.md` (integration endpoints and request examples)
+
+Runtime implementation details may exist in internal/private services and are published here as public-facing integration parameters.

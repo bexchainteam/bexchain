@@ -2,20 +2,25 @@
 
 BEXChain is an EVM-compatible blockchain with native coin **BEX**.
 
-## Status
+This repository is the public reference for network metadata, tokenomics, and integration docs.
 
-- Network: `mainnet` (update sesuai kondisi)
+## Network Profile
+
+- Network: `mainnet`
+- Chain Name: `bexchain`
 - Chain ID: `140586`
 - Native Currency: `BEX`
 - Decimals: `18`
-- Whitepaper: [`WHITEPAPER.md`](./WHITEPAPER.md)
 
-## Official Endpoints
+## Official Endpoints (Validated: 2026-05-13)
 
 - RPC: `https://rpc.bexchain.com`
-- Explorer: `https://scan.bexchain.com`
-- API: `https://api.bexchain.com/api` 
-  
+- API Base: `https://api.bexchain.com/api`
+- Explorer UI: `https://scan.bexchain.com`
+- Chain Info API: `https://api.bexchain.com/api/chain_info`
+
+For details and sample requests, see [`docs/network.md`](./docs/network.md).
+
 ## Add BEXChain to Wallet (MetaMask)
 
 - Network Name: `BEXChain`
@@ -29,9 +34,7 @@ BEXChain is an EVM-compatible blockchain with native coin **BEX**.
 This repository contains:
 - Public chain identity and technical references
 - Whitepaper and tokenomics
-- Network metadata for verification and integration
-
-> Note: Core node/client implementation repository: `LINK_REPO_NODE` (isi jika sudah ada).
+- Integration docs for wallets and applications
 
 ## Tokenomics (Summary)
 
@@ -42,16 +45,16 @@ This repository contains:
   - Ads Reward: `5%`
   - Founder: `10%`
   - Team: `10%`
-  - liquidity pool,Game & 3rd Party App: `50%`
+  - Liquidity, Game, and Third-Party App: `50%`
 
-Detail lengkap: lihat [`WHITEPAPER.md`](./WHITEPAPER.md).
+Full details: [`WHITEPAPER.md`](./WHITEPAPER.md)
 
-## Security
+## Contributing and Security
 
-If you find a vulnerability, please report privately to: `security@yourdomain.com`  
-(atau ganti dengan kontak resmi tim)
+- Contribution guide: [`CONTRIBUTING.md`](./CONTRIBUTING.md)
+- Security policy: [`SECURITY.md`](./SECURITY.md)
 
 ## Legal
 
 - License: [MIT](./LICENSE)
-- Disclaimer: This project is provided for transparency and ecosystem development purposes.
+- Disclaimer: This repository is provided for transparency and ecosystem development purposes.
