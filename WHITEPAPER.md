@@ -1,31 +1,31 @@
 # BEXChain Whitepaper v1.0 (Draft)
 
-Tanggal: 6 Maret 2026  
-Status: Draft internal
+Date: March 6, 2026
+Status: Internal draft
 
-## 1. Ringkasan Eksekutif
-BEXChain adalah ekosistem blockchain dengan koin native **BEX** sebagai mata uang utama untuk transaksi dalam game, aplikasi pihak ketiga, pembayaran layanan, dan utilitas DeFi di dalam ekosistem BEX. Whitepaper ini mendefinisikan fondasi ekonomi, distribusi token, model utilitas, dan parameter teknis awal jaringan.
+## 1. Executive Summary
+BEXChain is a blockchain ecosystem with its native coin **BEX** as the primary currency for in-game transactions, third-party applications, service payments, and DeFi utilities within the BEX ecosystem. This whitepaper defines the economic foundation, token distribution, utility model, and initial technical parameters of the network.
 
-## 2. Visi dan Tujuan
-Tujuan BEXChain adalah membangun ekosistem digital terintegrasi di mana:
-- Pengguna dapat memperoleh BEX melalui aktivitas mining dan partisipasi ekosistem.
-- Pengembang game/aplikasi pihak ketiga dapat mengadopsi BEX sebagai alat pembayaran.
-- Produk inti BEX saling terhubung melalui wallet, DEX, dan layanan API/RPC.
+## 2. Vision and Goals
+BEXChain's goal is to build an integrated digital ecosystem where:
+- Users can earn BEX through mining activities and ecosystem participation.
+- Third-party game/app developers can adopt BEX as a means of payment.
+- BEX's core products are interconnected through wallets, DEXs, and API/RPC services.
 
-Visi jangka panjang: BEX menjadi medium of exchange utama lintas produk dalam ekosistem BEXChain.
+Long-term vision: BEX becomes the primary medium of exchange across products within the BEXChain ecosystem.
 
-## 3. Produk Ekosistem
-Produk dan kanal utilitas yang menjadi fokus:
-- **Mining Bot Telegram**: onboarding dan reward mining berbasis aktivitas komunitas.
-- **BEX Miner Android**: antarmuka mobile untuk aktivitas mining dan monitoring reward.
-- **BEX DEX**: pertukaran/swap aset di dalam ekosistem.
-- **BEX Wallet Multichain**: manajemen aset BEX dan aset lintas jaringan.
-- **Integrasi pihak ketiga**: game dan aplikasi eksternal yang menerima BEX sebagai mata uang.
+## 3. Ecosystem Products
+Focused utility products and channels:
+- **Mining Bot Telegram**: onboarding and mining rewards based on community activity.
+- **BEX Miner Android**: mobile interface for mining activities and reward monitoring.
+- **BEX DEX**: asset exchange/swapping within the ecosystem.
+- **BEX Wallet Multichain**: BEX asset and cross-chain asset management.
+- **Third-party integrations**: external games and applications that accept BEX as currency.
 
-## 4. Fondasi Teknis
-BEXChain menggunakan pendekatan **custom EVM-compatible architecture** agar kompatibel dengan pola integrasi dan tooling EVM.
+## 4. Technical Foundation
+BEXChain uses a custom EVM-compatible architecture approach to ensure compatibility with EVM integration patterns and tooling.
 
-Parameter teknis saat ini (mengacu konfigurasi source code):
+Current technical parameters (referring to source code configuration):
 - Chain Name: `bexchain`
 - Chain ID: `140586`
 - Native Coin: `BEX`
@@ -33,91 +33,92 @@ Parameter teknis saat ini (mengacu konfigurasi source code):
 - RPC URL (default): `http://localhost:8545`
 - API URL (default): `http://localhost:8545/api`
 
-Endpoint yang tersedia di implementasi saat ini:
+Available endpoints in the current implementation:
 - JSON-RPC: `/rpc`
 - Chain info API: `/api/chain_info`
 - Gas fee API: `/api/gas_fees`
 - Explorer UI: `/explorer/`
 
-## 5. Model Gas
-BEX digunakan sebagai biaya eksekusi transaksi di jaringan.
+## 5. Gas Model
+BEX is used as a fee for executing transactions on the network.
 
-Konfigurasi gas fee default saat ini:
+Current default gas fee configuration:
 - Standard transaction: `0.01 BEX`
 - Token transfer: `0.01 BEX`
 - Token contract execution: `0.02 BEX`
 - NFT transfer: `0.015 BEX`
 - NFT contract execution: `0.025 BEX`
 
-Catatan:
-- Model ini dapat disesuaikan oleh governance/admin sesuai kebutuhan operasional jaringan.
-- Gas fee wallet saat ini diarahkan ke alamat treasury operasional yang dikonfigurasi pada node.
+Note:
+- This model can be adjusted by governance/admins to suit the network's operational needs.
+- Wallet gas fees are currently directed to the operational treasury address configured on the node.
 
-## 6. Tokenomics BEX
+## 6. BEX Tokenomics
 ### 6.1 Total Supply
-- Total suplai BEX: **10,000,000 BEX**
-- Sifat suplai: **fixed supply** (tidak bertambah)
+- Total BEX supply: **10,000,000 BEX**
+- Supply type: **fixed supply** (does not increase)
 
-### 6.2 Distribusi Token
+### 6.2 Token Distribution
 - Mining Reward: **1,500,000 BEX** (15%)
 - Presale: **1,000,000 BEX** (10%)
 - Ads Reward: **500,000 BEX** (5%)
 - Founder: **1,000,000 BEX** (10%)
 - Team: **1,000,000 BEX** (10%)
-- Alokasi Game & Aplikasi Pihak Ketiga: **5,000,000 BEX** (50%)
+- Game & Third-Party App Allocation: **5,000,000 BEX** (50%)
 
 Total: **10,000,000 BEX** (100%)
 
 ### 6.3 Presale Vesting
-Alokasi presale sebesar **1,000,000 BEX** mengikuti skema:
-- **Cliff 12 bulan**: bulan 1-12 tidak ada unlock.
-- **Mulai bulan ke-13**: unlock **10% per bulan** dari alokasi presale.
-- Besaran unlock bulanan: **100,000 BEX/bulan**.
-- Durasi unlock: **10 bulan** (bulan ke-13 sampai bulan ke-22).
-- Bulan ke-22: **100% alokasi presale telah unlocked**.
+The presale allocation of **1,000,000 BEX** follows the following scheme:
+- **12-month Cliff**: No unlocking for months 1-12.
+- **Starting from the 13th month**: 10% per month of the presale allocation is unlocked.
+- Monthly unlock amount: **100,000 BEX/month**.
+- Unlock duration: **10 months** (months 13 to 22).
+- Month 22: **100% of the presale allocation has been unlocked**.
 
-## 7. Kebijakan Likuiditas
-Likuiditas awal ekosistem akan diisi dari dua sumber utama:
-- **10% dari pendapatan iklan bulanan**.
-- **Dana dari presale BEX**.
+## 7. Liquidity Policy
+Initial liquidity in the ecosystem will be provided by two main sources:
+- **10% of monthly advertising revenue**.
+- **Funds from the BEX presale**.
 
-Kebijakan ini bertujuan menjaga kedalaman pasar awal, mendukung aktivitas swap di BEX DEX, dan menurunkan friksi adopsi untuk pengguna baru.
+This policy aims to maintain initial market depth, support swap activity on the BEX DEX, and reduce adoption friction for new users.
 
-## 8. Keamanan dan Audit
-Keamanan implementasi saat ini mencakup:
-- Audit trail operasi aplikasi (logging internal).
-- Endpoint audit trail API untuk monitoring (`/api/security/audit_trail`).
+## 8. Security and Audit
+Current security implementation includes:
+- Application operation audit trail (internal logging).
+- API audit trail endpoint for monitoring (`/api/security/audit_trail`).
 - Rate limiting API.
-- Validasi input transaksi.
-- Dukungan multi-signature wallet pada modul keamanan.
+- Transaction input validation.
+- Multi-signature wallet support in the security module.
 
-Status audit:
-- **Belum mencantumkan audit eksternal independen** pada draft ini.
-- Rekomendasi tahap berikutnya: smart contract audit dan security assessment oleh pihak ketiga sebelum ekspansi skala besar.
+Audit status:
+- **Independent external audit not yet included** in this draft.
+- Recommended next phase: smart contract audit and security assessment by a third party before large-scale expansion.
 
-## 9. Tata Kelola dan Operasional
-Pada fase awal, pengelolaan parameter jaringan (termasuk gas fee dan operasional treasury) dilakukan oleh tim inti untuk stabilisasi ekosistem. Seiring maturitas jaringan, model governance dapat dikembangkan menuju mekanisme yang lebih terbuka dan partisipatif.
+## 9. Governance and Operations
+In the initial phase, network parameter management (including gas fees and treasury operations) is carried out by the core team to stabilize the ecosystem. As the network matures, the governance model can be evolved towards a more open and participatory mechanism.
 
-## 10. Roadmap Ringkas (Draft)
-- Fase 1: Stabilitas main service (RPC, explorer, wallet flow, gas policy).
-- Fase 2: Ekspansi utilitas BEX di game dan aplikasi pihak ketiga.
-- Fase 3: Peningkatan likuiditas DEX dan integrasi multichain.
-- Fase 4: Audit eksternal, hardening keamanan, dan skalabilitas ekosistem.
+## 10. Summary Roadmap (Draft)
+- Phase 1: Stability of main services (RPC, explorer, wallet flow, gas policy).
+- Phase 2: Expansion of BEX utility in games and third-party applications.
 
-## 11. Risiko
-Risiko utama yang perlu dikelola:
-- Volatilitas harga aset digital.
-- Risiko keamanan aplikasi/smart contract.
-- Risiko adopsi (pengguna dan mitra pihak ketiga).
-- Perubahan kebijakan/regulasi di wilayah operasional.
+- Phase 3: DEX liquidity enhancement and multichain integration.
+- Phase 4: External audit, security hardening, and ecosystem scalability.
+
+## 11. Risks
+Key risks to manage:
+- Digital asset price volatility.
+- Application/smart contract security risks.
+- Adoption risks (users and third-party partners).
+- Policy/regulatory changes in operational regions.
 
 ## 12. Disclaimer
-Dokumen ini adalah whitepaper teknis dan ekonomi untuk tujuan informasi, bukan nasihat investasi, hukum, atau pajak. Partisipasi dalam ekosistem aset digital memiliki risiko tinggi dan menjadi tanggung jawab masing-masing pihak.
+This document is a technical and economic whitepaper for informational purposes and does not constitute investment, legal, or tax advice. Participation in the asset ecosystem Digital assets carry high risks and are the responsibility of each party.
 
 ---
 
-## Lampiran A - Sumber Parameter Teknis (Codebase)
-Parameter teknis dalam dokumen ini disusun dari konfigurasi dan implementasi yang ada pada repository:
+## Appendix A - Technical Parameter Sources (Codebase)
+The technical parameters in this document are compiled from the configurations and implementations in the repository:
 - `config.py` (chain, supply, RPC/API)
 - `blockchain.py` (gas fee defaults)
-- `app.py` (endpoint RPC, API, explorer, audit trail)
+- `app.py` (RPC endpoint, API, explorer, audit trail)
