@@ -39,6 +39,15 @@ Public integration endpoints:
 - Chain info API: `https://api.bexchain.com/api/chain_info`
 - Gas fee API: `https://api.bexchain.com/api/gas_fees` (currently disabled on public endpoint)
 
+- Metadata chainlist:
+- Network ID: `140586`
+- EVM Features: `EIP155`, `EIP1559`
+- Explorer Standard: `EIP3091`
+- URL info: `https://bexchain.com`
+
+Listing status note:
+- Listed on Chainlist (Chain ID 140586), verified on May 21, 2026.
+
 ## 5. Gas Model
 BEX is used as a fee for executing transactions on the network.
 
