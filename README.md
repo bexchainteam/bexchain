@@ -47,12 +47,18 @@ This repository contains:
   - Team: `10%`
   - Liquidity, Game, and Third-Party App: `50%`
 
-Full details: [`WHITEPAPER.md`](./WHITEPAPER.md)
+Full details: [WHITEPAPER.md](./WHITEPAPER.md)
+
+[![SLIP-0044 Compliant](https://img.shields.io/badge/SLIP--0044-Compliant-brightgreen)](https://github.com/trezor/slip-0044)
+
+## SLIP-0044 Compliance
+BEXChain is registered in SatoshiLabs SLIP-0044 with coin type 140586.
+See [SLIP-0044_COMPLIANCE.md](./SLIP-0044_COMPLIANCE.md) for details.
 
 ## Contributing and Security
 
-- Contribution guide: [`CONTRIBUTING.md`](./CONTRIBUTING.md)
-- Security policy: [`SECURITY.md`](./SECURITY.md)
+- Contribution guide: [CONTRIBUTING.md](./CONTRIBUTING.md)
+- Security policy: [SECURITY.md](./SECURITY.md)
 
 ## Legal
 
